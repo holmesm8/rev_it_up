@@ -10,6 +10,9 @@ source "https://rubygems.org"
   gem "shotgun"
 
 group :test do
+  gem 'shoulda-matchers'
+  gem 'pry'
+  gem 'launchy'
   gem "capybara"
   gem "database_cleaner"
   gem "rspec"
