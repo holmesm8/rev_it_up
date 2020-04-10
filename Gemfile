@@ -8,6 +8,7 @@ source "https://rubygems.org"
   gem "sinatra-activerecord"
   gem "tux"
   gem "shotgun"
+  gem 'json'
 
 group :test do
   gem 'shoulda-matchers'
