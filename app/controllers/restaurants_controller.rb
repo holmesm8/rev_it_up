@@ -1,9 +1,14 @@
 require './app/poros/restaurant'
 require './app/services/yelp_services'
-require './app/serializers/restaurant_serializer'
+require './app/services/google_services'
+# require './app/serializers/restaurant_serializer'
+require 'sinatra'
+require 'sinatra/json'
 
-class RestaurantController
-  get '/random_restaurant' do
+# should recieve latitude, longitude, radius, price parameters
+
+# class RestaurantController
+  get '/' do
     # make yelp api call
     yelp = YelpService.new(39.7392, -104.9903, 1000, 3)
 
@@ -14,7 +19,7 @@ class RestaurantController
     yelp.restaurant
 
     # seralize json
-    
+
 
   end
-end
+# end

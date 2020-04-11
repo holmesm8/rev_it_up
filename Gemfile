@@ -11,6 +11,7 @@ gem "shotgun"
 gem 'fast_jsonapi'
 gem 'dotenv'
 gem 'faraday'
+gem 'sinatra/json'
 
 group :test do
   gem 'pry'
