@@ -16,15 +16,15 @@
 ENV["RACK_ENV"] ||= "test"
 require File.expand_path("../../config/environment", __FILE__)
 require 'rspec'
-require 'capybara/dsl'
+# require 'capybara/dsl'
 require 'database_cleaner'
-Capybara.app = RevItUpApp
+# Capybara.app = RevItUpApp
 DatabaseCleaner.strategy = :truncation
 
 
 RSpec.configure do |config|
 
-  config.include Capybara::DSL
+  # config.include Capybara::DSL
 
   config.before(:all) do
     DatabaseCleaner.clean

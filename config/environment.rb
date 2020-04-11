@@ -1,6 +1,9 @@
 require 'bundler'
 Bundler.require
 
+require 'dotenv'
+Dotenv.load('dotenv.env')
+
 # get the path of the root of the app
 APP_ROOT = File.expand_path("..", __dir__)
 
@@ -9,6 +12,9 @@ Dir.glob(File.join(APP_ROOT, 'app', 'controllers', '*.rb')).each { |file| requir
 
 # require the model(s)
 Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each { |file| require file }
+
+# require the services)
+Dir.glob(File.join(APP_ROOT, 'app', 'services', '*.rb')).each { |file| require file }
 
 # require database configurations
 require File.join(APP_ROOT, 'config', 'database')
