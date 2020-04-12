@@ -10,8 +10,8 @@ APP_ROOT = File.expand_path("..", __dir__)
 # require the controller(s)
 Dir.glob(File.join(APP_ROOT, 'app', 'controllers', '*.rb')).each { |file| require file }
 
-# require the model(s)
-Dir.glob(File.join(APP_ROOT, 'app', 'models', '*.rb')).each { |file| require file }
+# require the poro(s)
+Dir.glob(File.join(APP_ROOT, 'app', 'poros', '*.rb')).each { |file| require file }
 
 # require the services)
 Dir.glob(File.join(APP_ROOT, 'app', 'services', '*.rb')).each { |file| require file }

@@ -1,5 +1,12 @@
 class Restaurant
-  attr_reader :phone
+  attr_reader :name,
+              :yelp_rating,
+              :price,
+              :phone,
+              :latitude,
+              :longitude,
+              :location,
+              :categories
 
   def initialize(restaurant)
     @name = restaurant[:name]
@@ -9,7 +16,7 @@ class Restaurant
     @latitude = restaurant[:coordinates][:latitude]
     @longitude = restaurant[:coordinates][:longitude]
     @location = restaurant[:location]
-    @category = restaurant[:categories]
+    @categories = restaurant[:categories]
   end
 
   def average_rating(google_rating)
@@ -17,14 +24,3 @@ class Restaurant
     (@yelp_rating + google_rating) / 2
   end
 end
-
-
-
-# name
-# @json_response[:businesses][0][:name]
-# yelp_rating
-# @json_response[:businesses][0][:rating]
-# price
-# @json_response[:businesses][0][:price]
-# phone
-# @json_response[:businesses][0][:phone]
