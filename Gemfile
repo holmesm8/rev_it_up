@@ -1,4 +1,5 @@
 source "https://rubygems.org"
+require 'rubygems'
 
 gem "rack"
 gem "sinatra"
@@ -11,10 +12,13 @@ gem "shotgun"
 gem 'fast_jsonapi'
 gem 'dotenv'
 gem 'faraday'
+gem 'json'
+gem 'sinatra-contrib'
 
 group :test do
   gem 'pry'
   gem "database_cleaner"
   gem "rspec"
   gem "rack-test"
+  gem 'capybara'
 end

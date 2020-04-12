@@ -1,2 +1,2 @@
-require './server'
-run Server.new
+require_relative 'config/environment'
+run Server

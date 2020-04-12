@@ -1,5 +1,6 @@
 class Restaurant
-  attr_reader :name,
+  attr_reader :id,
+              :name,
               :yelp_rating,
               :price,
               :phone,
@@ -7,20 +8,25 @@ class Restaurant
               :longitude,
               :location,
               :categories
+  attr_accessor :google_rating,
+                :avg_rating
 
   def initialize(restaurant)
+    @id = restaurant[:id]
     @name = restaurant[:name]
-    @yelp_rating = restaurant[:rating]
+    @yelp_rating = restaurant[:rating].to_s
+    @google_rating = nil
+    @avg_rating = nil
     @price = restaurant[:price]
     @phone = restaurant[:phone]
-    @latitude = restaurant[:coordinates][:latitude]
-    @longitude = restaurant[:coordinates][:longitude]
+    @latitude = restaurant[:coordinates][:latitude].to_s
+    @longitude = restaurant[:coordinates][:longitude].to_s
     @location = restaurant[:location]
     @categories = restaurant[:categories]
   end
 
   def average_rating(google_rating)
     return @yelp_rating if google_rating == nil
-    (@yelp_rating + google_rating) / 2
+    (@yelp_rating.to_f + google_rating) / 2
   end
 end

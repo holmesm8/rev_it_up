@@ -1,8 +1,8 @@
 require 'bundler'
-Bundler.require
-
+require 'sinatra/json'
 require 'dotenv'
 Dotenv.load('dotenv.env')
+Bundler.require
 
 # get the path of the root of the app
 APP_ROOT = File.expand_path("..", __dir__)
@@ -20,7 +20,7 @@ Dir.glob(File.join(APP_ROOT, 'app', 'services', '*.rb')).each { |file| require f
 require File.join(APP_ROOT, 'config', 'database')
 
 # configure SinatraPractice settings
-class RevItUpApp < Sinatra::Base
+class Server < Sinatra::Base
  set :method_override, true
  set :root, APP_ROOT
  set :views, File.join(APP_ROOT, "app", "views")

@@ -19,15 +19,15 @@ require File.expand_path("../../config/environment", __FILE__)
 require 'rspec'
 require 'rack/test'
 # require 'sinatra/test/methods'
-# require 'capybara/dsl'
+require 'capybara/dsl'
 require 'database_cleaner'
 # Capybara.app = RevItUpApp
-DatabaseCleaner.strategy = :truncation
+# DatabaseCleaner.strategy = :truncation
 
 
 RSpec.configure do |config|
 
-  # config.include Capybara::DSL
+  config.include Capybara::DSL
   config.include Rack::Test::Methods
 
   config.before(:all) do
