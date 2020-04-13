@@ -17,3 +17,4 @@ end
 
 
 # google_rating = GoogleService.new(yelp.restaurant.phone).google_rating
+# create a facade for the refactor
