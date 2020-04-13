@@ -14,6 +14,7 @@ gem 'dotenv'
 gem 'faraday'
 gem 'json'
 gem 'sinatra-contrib'
+gem 'rake'
 
 group :test do
   gem 'pry'
