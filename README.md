@@ -1,7 +1,7 @@
 # RevItUp
 
 ### Description
-RevItUp is a Sinatra microservice used as the backend for the ShakeItUp web application. This microservice makes two API calls to Yelp and Google Places to return a randomly selected restaurant based on query parameters provided by the user.
+RevItUp is a Sinatra microservice used as the backend for the ShakeItUp web application. This microservice makes two API calls to Yelp Fusion and Google Places to return a randomly selected restaurant based on query parameters provided by the user.
 
 ### API Endpoint
 
