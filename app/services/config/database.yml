@@ -1,0 +1,11 @@
+development:
+ adapter: postgresql
+ database: rev_it_up_development
+
+test:
+ adapter: postgresql
+ database: rev_it_up_test
+
+production:
+ adapter: postgresql
+ database: rev_it_up_production
