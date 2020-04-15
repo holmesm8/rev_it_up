@@ -7,7 +7,8 @@ class Restaurant
               :latitude,
               :longitude,
               :location,
-              :categories
+              :categories,
+              :url
   attr_accessor :google_rating,
                 :avg_rating
 
@@ -23,10 +24,11 @@ class Restaurant
     @longitude = restaurant[:coordinates][:longitude].to_s
     @location = restaurant[:location]
     @categories = restaurant[:categories]
+    @url = restaurant[:url]
   end
 
   def average_rating(google_rating)
     return @yelp_rating if google_rating == nil
-    (@yelp_rating.to_f + google_rating) / 2
+    (@yelp_rating.to_f + google_rating.to_f) / 2
   end
 end
