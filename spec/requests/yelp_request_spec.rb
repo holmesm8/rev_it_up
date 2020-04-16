@@ -1,14 +1,6 @@
 ENV['APP_ENV'] = 'test'
 
 require 'spec_helper'
-require './app/services/yelp_services'
-require './app/services/google_services'
-require './servers'
-require 'rspec'
-# require 'test/unit'
-require 'rack/test'
-require 'pry'
-
 
 RSpec.describe 'Rev it up api' do
   include Rack::Test::Methods
@@ -26,12 +18,3 @@ RSpec.describe 'Rev it up api' do
     response = JSON.parse(last_response.body)
   end
 end
-
-# RSpec.describe "Yelp api", type: :request do
-#   it "can create a service" do
-#     #latitude, longitude, radius, price parameters
-#     # yelp = YelpService.new(39.7392, -104.9903, 1000, 3)
-#     # phone = yelp.restaurant.phone
-#     # google = GoogleService.new(phone).google_rating
-#   end
-# end
