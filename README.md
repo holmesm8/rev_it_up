@@ -34,3 +34,11 @@ This Sinatra API application uses the following gems for testing:
    * rspec
 
 To run the test suite, simply run the command `rspec` from your terminal.
+
+
+## Project Collaborators
+
+* Cassie Achzenick - https://github.com/caachz
+* Travis Borgsmiller - https://github.com/TravisBorgsmiller
+* Alex Gallant - https://github.com/agallant121
+* Matt Holmes - https://github.com/holmesm8
