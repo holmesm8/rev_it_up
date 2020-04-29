@@ -28,7 +28,7 @@ class Restaurant
   end
 
   def average_rating(google_rating)
-    return @yelp_rating if google_rating == nil
+    return @yelp_rating if google_rating == 1
     (@yelp_rating.to_f + google_rating.to_f) / 2
   end
 end
