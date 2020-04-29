@@ -1,7 +1,5 @@
 require 'sinatra/json'
 
-
-# should recieve latitude, longitude, radius, price parameters
 class Server < Sinatra::Base
   before do
     content_type :json
@@ -14,7 +12,3 @@ class Server < Sinatra::Base
     yelp.restaurant.to_json
   end
 end
-
-
-# google_rating = GoogleService.new(yelp.restaurant.phone).google_rating
-# create a facade for the refactor
